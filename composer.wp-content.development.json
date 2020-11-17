@@ -1,0 +1,39 @@
+{
+    "name"        : "goldeimer/wp-install",
+    "description" : "",
+    "type"        : "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/goldeimer/wp-theme-goldeimer"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/goldeimer/wp-toilet-paper-calculator"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/goldeimer/wp-util"
+        }
+    ],
+    "config"      : {
+        "vendor-dir": "wp-content/vendor"
+    },
+    "require"     : {
+        "goldeimer/wp-theme-goldeimer": "dev-master",
+        "goldeimer/wp-toilet-paper-calculator": "dev-master"
+    },
+    "extra"       : {
+        "installer-paths"      : {
+            "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "wp"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
