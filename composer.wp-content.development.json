@@ -9,6 +9,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/goldeimer/php-util"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/goldeimer/wp-theme-goldeimer"
         },
         {
