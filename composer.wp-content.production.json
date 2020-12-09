@@ -1,11 +1,25 @@
 {
-    "name"        : "goldeimer/wp-install",
-    "description" : "",
-    "type"        : "project",
+    "config": {
+        "vendor-dir": "wp-content/vendor"
+    },
+    "description": "Installs Goldeimer's WordPress plugin(s) and theme(s), either into an existing WordPress installation's root, or stand-alone, including a fresh WordPress core.",
+    "extra": {
+        "installer-paths": {
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "wordpress-install-dir": "wp"
+    },
+    "license": "BSD-2-Clause",
+    "name": "goldeimer/wp-install",
     "repositories": [
         {
             "type": "composer",
-            "url" : "https://wpackagist.org"
+            "url": "https://wpackagist.org"
         },
         {
             "type": "vcs",
@@ -20,17 +34,8 @@
             "url": "https://github.com/goldeimer/wp-util"
         }
     ],
-    "config"      : {
-        "vendor-dir": "wp-content/vendor"
+    "require": {
+        "goldeimer/wp-theme-goldeimer": "^0.2"
     },
-    "require"     : {
-        "goldeimer/wp-theme-goldeimer": "^0.1"
-    },
-    "extra"       : {
-        "installer-paths"      : {
-            "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-            "wp-content/themes/{$name}/": ["type:wordpress-theme"]
-        },
-        "wordpress-install-dir": "wp"
-    }
+    "type": "project"
 }

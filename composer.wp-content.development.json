@@ -1,11 +1,27 @@
 {
-    "name"        : "goldeimer/wp-install",
-    "description" : "",
-    "type"        : "project",
+    "config": {
+        "vendor-dir": "wp-content/vendor"
+    },
+    "description": "Installs Goldeimer's WordPress plugin(s) and theme(s), either into an existing WordPress installation's root, or stand-alone, including a fresh WordPress core.",
+    "extra": {
+        "installer-paths": {
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "wordpress-install-dir": "wp"
+    },
+    "license": "BSD-2-Clause",
+    "minimum-stability": "dev",
+    "name": "goldeimer/wp-install",
+    "prefer-stable": true,
     "repositories": [
         {
             "type": "composer",
-            "url" : "https://wpackagist.org"
+            "url": "https://wpackagist.org"
         },
         {
             "type": "vcs",
@@ -24,20 +40,9 @@
             "url": "https://github.com/goldeimer/wp-util"
         }
     ],
-    "config"      : {
-        "vendor-dir": "wp-content/vendor"
-    },
-    "require"     : {
+    "require": {
         "goldeimer/wp-theme-goldeimer": "dev-master",
         "goldeimer/wp-toilet-paper-calculator": "dev-master"
     },
-    "extra"       : {
-        "installer-paths"      : {
-            "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-            "wp-content/themes/{$name}/": ["type:wordpress-theme"]
-        },
-        "wordpress-install-dir": "wp"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "type": "project"
 }
