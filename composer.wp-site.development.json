@@ -36,9 +36,9 @@
             "url": "https://github.com/goldeimer/wp-util"
         }
     ],
-    "require": {
+    "require"     : {
         "goldeimer/wp-theme-goldeimer": "dev-master",
-        "johnpbloch/wordpress": "^4.9"
+        "johnpbloch/wordpress"               : "^4.9"
     },
     "type": "project"
 }

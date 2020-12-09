@@ -34,7 +34,7 @@
             "url": "https://github.com/goldeimer/wp-util"
         }
     ],
-    "require": {
+    "require"     : {
         "goldeimer/wp-theme-goldeimer": "^0.2"
     },
     "type": "project"
